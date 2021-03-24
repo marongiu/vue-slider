@@ -11,17 +11,35 @@ var app = new Vue({
   methods: {
     nextImg: function () {
       // devo prendere indice e spostarlo a seconda delle immagini
-      this.index++
-      if (this.index == 3) {
+      if (this.index < this.arrayImg.length -1) {
+        this.index++
+      } else {
         this.index = 0;
       }
     },
     prevImg: function () {
       // devo prendere indice e spostarlo a seconda delle immagini
-      this.index--
-      if (this.index == -1) {
-        this.index = 2;
+      if (this.index > 0) {
+        this.index--
+      } else {
+        this.index = this.arrayImg.length -1;
       }
     }
   }
 });
+
+// metodo Base: con 3 immagini
+// nextImg: function () {
+//   // devo prendere indice e spostarlo a seconda delle immagini
+//   this.index++
+//   if (this.index == 3) {
+//     this.index = 0;
+//   }
+// },
+// prevImg: function () {
+//   // devo prendere indice e spostarlo a seconda delle immagini
+//   this.index--
+//   if (this.index == -1) {
+//     this.index = 2;
+//   }
+// }

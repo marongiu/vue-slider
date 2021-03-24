@@ -25,6 +25,13 @@ var app = new Vue({
       } else {
         this.index = this.arrayImg.length - 1;
       }
+    },
+    select: function (circleIndex) {
+      this.index = circleIndex;
+    },
+
+    active: function (circleIndex) {
+
     }
   }
 });

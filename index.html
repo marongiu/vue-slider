@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Slider</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./assets/css/master.css">
+</head>
+<body>
+
+  <div id="root">
+    <div class="slider-container">
+      <div class="slider">
+        <i class="fas fa-chevron-circle-left" @click="prevImg"></i>
+         <!-- seleziono array con un indice che parte da 0 -->
+        <img :src="arrayImg[index]" alt="">
+        <i class="fas fa-chevron-circle-right" @click="nextImg"></i>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="./assets/js/main.js" charset="utf-8"></script>
+</body>
+</html>

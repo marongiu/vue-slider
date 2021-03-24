@@ -26,7 +26,8 @@
       </div>
       <div class="dots">
         <!-- Ciclo le icone tante quante sono le immagini nel'array e usando index delle immagini applico il click -->
-        <i v-for="circle in arrayImg.length" class="fas fa-circle" @click="select(circle - 1)" :class="active"></i>
+                                                                                                      <!-- Se circle - 1 è == index allora imposta active altrimenti toglilo -->
+        <i v-for="circle in arrayImg.length" class="fas fa-circle" @click="select(circle - 1)" :class="(circle - 1 == index) ? 'active' : ''"></i>
       </div>
     </div>
   </div>

@@ -28,10 +28,6 @@ var app = new Vue({
     },
     select: function (circleIndex) {
       this.index = circleIndex;
-    },
-
-    active: function (circleIndex) {
-
     }
   }
 });

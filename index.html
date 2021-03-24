@@ -13,10 +13,19 @@
   <div id="root">
     <div class="slider-container">
       <div class="slider">
-        <i class="fas fa-chevron-circle-left" @click="prevImg"></i>
-         <!-- seleziono array con un indice che parte da 0 -->
-        <img :src="arrayImg[index]" alt="">
-        <i class="fas fa-chevron-circle-right" @click="nextImg"></i>
+        <div class="prev">
+          <i class="fas fa-chevron-circle-left" @click="prevImg"></i>
+        </div>
+        <!-- seleziono array con un indice che parte da 0 -->
+        <div class="slider-img">
+          <img :src="arrayImg[index]" alt="">
+        </div>
+        <div class="next">
+          <i class="fas fa-chevron-circle-right" @click="nextImg"></i>
+        </div>
+      </div>
+      <div class="dots">
+        <i v-for="circle in arrayImg.length" class="fas fa-circle"></i>
       </div>
     </div>
   </div>
